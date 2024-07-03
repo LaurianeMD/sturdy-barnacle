@@ -20,3 +20,14 @@ if __name__ == "__main__":
     point2 = (4, 5, 6)
     distance = chebyshev_distance_numpy(point1, point2)
     print("Chebyshev Distance (NumPy):", distance)
+
+
+def chebyshev_distance_map(p1, p2):
+    """Calculate the Chebyshev distance between two points using the map function"""
+    return max(map(lambda x, y: abs(x - y), p1, p2))
+
+if __name__ == "__main__":
+    point1 = (1, 2, 3)
+    point2 = (4, 5, 6)
+    distance = chebyshev_distance_map(point1, point2)
+    print("Chebyshev Distance (map):", distance)
